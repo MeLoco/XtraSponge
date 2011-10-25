@@ -1,3 +1,13 @@
+LÄS!!!
+bin/ är alltid outdated! bygg src/ för att göra nya filer.
+
+Filer som krävs för att bygga pluginen:
+- src/
+- plugin.yml
+
+.project och .classpath är för eclipse.
+
+
 XtraSponge:
 Version; 0.1 (Till's den är "färdig")
 
