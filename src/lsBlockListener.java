@@ -11,8 +11,8 @@ import org.bukkit.event.block.BlockPlaceEvent;
 
 
 public class lsBlockListener extends BlockListener{
-	public static lavasponge plugin;
-	public lsBlockListener(lavasponge instance){
+	public static XtraSponge plugin;
+	public lsBlockListener(XtraSponge instance){
 		this.plugin = instance;
 	}
 	

@@ -6,6 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Properties;
 
+/* hanterar filen för inställningarna, och hur värdena laddas in rätt i variabler så de kan användas */
 
 public final class iProperties {
 	
@@ -23,6 +24,7 @@ public final class iProperties {
 			save();
 		}
 	}
+	/* Provar öppna redan existerande settings-fil */ 
 	public void load(){
 		try{
 			properties.load(new FileInputStream(fn));
@@ -31,6 +33,7 @@ public final class iProperties {
 			log.log(Level.SEVERE, (new StringBuilder("Unable to load ")).append(fn).toString(), ex);
 		}
 	}
+	/* Sparar fil vid förändringar */ 
 	public void save(){
 		try{
 			properties.store(new FileOutputStream(fn), "Minecraft Properties File");
@@ -117,18 +120,18 @@ public final class iProperties {
 			return 0L;
 		}
 	}
-		public void setLong(String k, long v){
+	public void setLong(String k, long v){
 			properties.setProperty(k, String.valueOf(v));
 			save();
 		}
-		public boolean getBoolean(String k){
+	public boolean getBoolean(String k){
 			if(properties.contains(k)){
 				return Boolean.parseBoolean(properties.getProperty(k));
 			}else{
 				return false;
 			}
 		}
-		public boolean getBoolean(String k, boolean v){
+	public boolean getBoolean(String k, boolean v){
 			if(properties.contains(k)){
 				return Boolean.parseBoolean(properties.getProperty(k));
 			}else{
@@ -136,7 +139,7 @@ public final class iProperties {
 				return false;
 			}
 		}
-		public void setBoolean(String k, boolean v){
+	public void setBoolean(String k, boolean v){
 			properties.setProperty(k, String.valueOf(v));
 			save();
 		}
